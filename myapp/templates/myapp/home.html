@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trade Data</title>
+</head>
+<body>
+    <h1>Trade Data Table</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Trade Code</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Open</th>
+            <th>Close</th>
+            <th>Volume</th>
+        </tr>
+        {% for trade in trades %}
+        <tr>
+            <td>{{ trade.date }}</td>
+            <td>{{ trade.trade_code }}</td>
+            <td>{{ trade.high }}</td>
+            <td>{{ trade.low }}</td>
+            <td>{{ trade.open }}</td>
+            <td>{{ trade.close }}</td>
+            <td>{{ trade.volume }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
