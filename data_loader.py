@@ -1,11 +1,11 @@
 import json
-from myapp.models import Person
+from myapp.models import Trade
 
 def load_json_data():
-    with open('stock_market_data.json', 'r') as file:
+    with open('/Users/mr_baten/Desktop/macdjango/one/jsondata/stock_market_data.json', 'r') as file:
         data = json.load(file)
         for item in data:
-            Person.objects.create(
+            Trade.objects.create(
                 date = item['date'],
                 trade_code = item['trade_code'],
                 high = item['high'],
